@@ -1,7 +1,9 @@
-VERSION = "v1.0.0"
+VERSION = "v1.1.0"
 
 def main():
-    print(f"Aplikasi berjalan sukses! Versi saat ini: {VERSION}")
+    print(f"Mencoba menjalankan versi: {VERSION}")
+    hasil = 10 / 0
+    print(hasil)
 
 if __name__ == "__main__":
     main()
