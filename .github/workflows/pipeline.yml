@@ -1,0 +1,20 @@
+name: Pipeline CI/CD
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 1. Pull Kode
+        uses: actions/checkout@v4
+
+      - name: 2. Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 3. Jalankan Aplikasi
+        run: python app.py
